@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/icons8-menu2-70.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/calendar-icon_34471.ico")]
 
 

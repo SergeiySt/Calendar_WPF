@@ -139,5 +139,41 @@
   <ItemGroup>
     <Resource Include="Resources\icons8-menu2-70.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-plus-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-sterlka1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-strelka4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-svernut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-calendar234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-list23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-5555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-galka-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-nastroiki-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-tochku-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\calendar-icon_34471.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
