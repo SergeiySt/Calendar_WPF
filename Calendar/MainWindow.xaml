@@ -5,11 +5,561 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="668" Width="1038" >
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="289,93,0,0" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="7"  RenderTransformOrigin="0.367,0.615">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-70.png" Width="20" Height="20" Margin="5"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="1" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-4-70.png" Width="20" Height="20" Margin="5"/>
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="квітень 2023 р." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text=" " VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
+                    <Border Grid.Column="4" BorderThickness="0, 0, 2, 0" BorderBrush="#FFCECECE">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-date22-70.png" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Сьогодні" VerticalAlignment="Center" HorizontalAlignment="Center"   Padding="0,0,10,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Column="5" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-calendar2-70.png" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="День" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="6" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-week-70.png" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Тиждень" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="7" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-333-70.png" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Місяць" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="8" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-year-70.png" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Рік" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="9" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="Resources/icons8-tochka-70.png" Width="20" Height="20" Margin="5"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Grid.Column="0" Grid.ColumnSpan="1" BorderThickness="1" Grid.RowSpan="7">
+            <Border.Background>
+                <ImageBrush Stretch="UniformToFill" TileMode="None" Opacity="1" ImageSource="/011_Desktop.jpg">
+
+                </ImageBrush>
+            </Border.Background>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" >
+            <TextBlock Text="Понеділок" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" >
+            <TextBlock Text="Вівторок" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="3" >
+            <TextBlock Text="Середа" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="4" >
+            <TextBlock Text="Четверг" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="5" >
+            <TextBlock Text="П'ятниця" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="6" BorderThickness="0, 0, 1, 0">
+            <TextBlock Text="Субота" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="7" >
+            <TextBlock Text="Неділя" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="10.04" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="2" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="11" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="3" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="12" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="4" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="13" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="5" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="14" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="6" BorderThickness="0, 5, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="15" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="7" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="16" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="17" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="2" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="18" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="3" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="19" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="4" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="20" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="5" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="21" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="6" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="22" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="7" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="23" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="1" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="24" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="2" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="25" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="3" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="26" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="4" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="27" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="5" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="28" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="6" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="29" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="7" BorderThickness="0, 1, 0, 0">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="30" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="1" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="01.05" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="2" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="3" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="3" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="4" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="4" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="5" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="6" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="6" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="7" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="1" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="8" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Padding="5,0,0,0">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="2" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="9" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="3" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="10" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="4" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="11" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="5" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="12" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="6" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="13" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="7" BorderThickness="0, 1, 0, 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+            </Border.BorderBrush>
+            <TextBlock Text="14" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+        <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.606,-3.104" Height="30" Width="34" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/icons8-menu2-70.png"/>
+            </Button.Background>
+        </Button>
+        <!-- Продолжайте добавлять границы и текстовые блоки для всех ячеек в таблице -->
     </Grid>
 </Window>
